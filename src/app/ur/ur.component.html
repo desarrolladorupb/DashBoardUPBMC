@@ -1,0 +1,111 @@
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<div class="form-group row">
+				<div id="lista" class="col-12">
+						<select class="list" id="cmbComite" name="states[]" style="width:100%;">
+			<option >Seleccione un Comite</option>
+			<option *ngFor="let comite of lstComite" value="{{comite.code_podio}}">{{comite.name}}</option>
+		</select>
+				</div>
+			</div>
+	    </div>
+
+		<div class="col-12 col-md-6">
+			<div class="form-group row">
+				<div class="col-12">
+					<select id="cmbPrograma" name="states[]" style="width:100%;">
+						<option>Seleccione un Programa</option>
+						<option *ngFor="let programa of lstPrograma" value="{{programa.id}}">{{programa.name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class='col-12 col-md-6'>
+			<div class="form-group row">
+				<label for="example-date-input" class="col-12 col-form-label">Fecha inicio:</label>
+				<div class="col-12">
+					<input class="form-control" [(ngModel)]="fechaInicio" type="date" value="" id="idFechaInicio">
+				</div>
+			</div>
+		</div>
+
+		<div class='col-12 col-md-6'>
+			<div class="form-group row">
+				<label for="example-date-input" class="col-12 col-form-label">Fecha Fin:</label>
+				<div class="col-12">
+					<input class="form-control" [(ngModel)]="fechaFin" type="date" value="" id="idFechaFin">
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="row">
+			<div class="col-12 col-sm-3">
+				<button type="button" (click)="btnConsultarClick()" class="btn btn-primary btn-xs btn-block">Consultar</button>
+			</div>
+	</div>
+</div>
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<table class="table table-hover table-bordered" id="tblComoConocioAiesec">
+				<thead>
+					<tr>
+						<th>Como conocio aiesec</th>
+						<th>personas</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-12 col-md-6">
+			<div [chart]="chartComoConocioaiesec"></div>
+		</div>
+	</div>
+</div>	
+			
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<table class="table table-hover table-bordered" id="tblOpenMes">
+				<thead>
+					<tr>
+						<th>Open por mes</th>
+						<th>Numero opens</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+
+		</div>
+		<div class="col-12 col-md-6">
+			<div [chart]="chartOpenMes"></div>
+		</div>
+	</div>
+</div>
+
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12">
+			<table class="table table-hover table-bordered" id="tblOpenUniversidad">
+				<thead>
+					<tr>
+						<th>Universidad</th>
+						<th>Open Universidad</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-12 col-md-6">
+			<div [chart]="chartOpenUniversidad"></div>
+		</div>
+	</div>
+</div>
+<div class="preload">
+    <img src="../assets/gif.svg" alt="">
+</div>

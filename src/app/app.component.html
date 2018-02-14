@@ -1,0 +1,34 @@
+
+  <div class="">
+    <div class="nav">
+      <h1>DASHBOARD</h1>
+      <span class="fa fa-align-left" id="button-sidebar" (click)="sidebar_click()"></span>
+    </div>
+    <div class="main">
+      <div class="collapse width show sidebar" id="sidebar" >
+        <div class="list-group border-0 card text-center text-md-left">
+            <a [routerLink]="['/od']" class="list-group-item">Plan vs Achieved</a>
+            <a href="#menuogx" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"> <span class="d-md-inline">OGX</span> </a>
+            <div class="collapse" id="menuogx">
+                <a [routerLink]="['/ur']" class="list-group-item" data-parent="#menuogx">UR</a>
+                <a [routerLink]="['/ogx_coperaciones']" class="list-group-item" data-parent="#menuogx">Cooperaciones</a>
+                <a [routerLink]="['/ogx_standars']" class="list-group-item" data-parent="#menuogx">Estándares</a>
+            </div>
+
+            <a href="#menuixc" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"> <span class="d-md-inline">ICX</span> </a>
+            <div class="collapse" id="menuixc">
+                <a [routerLink]="['/icx_coperaciones']" class="list-group-item" data-parent="#menuixc">Cooperaciones</a>
+                <a [routerLink]="['/icx_standars']" class="list-group-item" data-parent="#menuixc">Estándares</a>
+            </div>
+
+        </div>
+      </div>
+      <div class="page" id="page">
+            <router-outlet></router-outlet>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>
+      @copyright-@UPB-MEDELLIN-2017 & MC-Beat
+    </p>
+  </footer>

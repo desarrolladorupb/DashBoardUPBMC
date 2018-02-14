@@ -1,0 +1,104 @@
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<div class="form-group row">
+				<div class="col-12">
+					<select id="cmbPrograma" name="states[]" style="width:100%;">
+						<option >Seleccione un Programa</option>
+						<option *ngFor="let programa of lstPrograma" value="{{programa.id}}">{{programa.name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class='col-12 col-md-6'>
+			<div class="form-group row">
+				<div class="col-12">
+					<select id="cmbFechaInicial" name="states[]" style="width:100%;">
+						<option >Semana Inicial</option>
+						<option *ngFor="let weeklyInicial of lstWeeklyInicial" value="{{weeklyInicial.init_date}}">{{weeklyInicial.name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class='col-12 col-md-6'>
+			<div class="form-group row">
+				<div class="col-12">
+					<select id="cmbFechaFinal" name="states[]" style="width:100%;">
+						<option >Semana Final</option>
+						<option *ngFor="let weeklyInicial of lstWeeklyInicial" value="{{weeklyInicial.final_date}}">{{weeklyInicial.name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="row">
+	<div class="col-12 col-sm-3">
+		<button type="button" (click)="btnConsultarClick()" class="btn btn-primary btn-xs btn-block">Consultar</button>
+	</div>
+</div>
+</div>
+
+<div class="carga-contenido">
+	<div class="row">
+		<div class="col-12">
+			<table class="text-center" id="tblComites">
+				<thead>
+					<tr>
+						<th class="black" rowspan="2">Entidad</th>
+						<th class="green text-center"  colspan="6">APPLICANT</th>
+						<th  class="green-light text-center"colspan="6">ACCEPTED</th>
+						<th  class="orange text-center" colspan="6">APPROVED</th>
+						<th  class="red text-center" colspan="6">REALIZED</th>
+						<th  class="blue text-center" colspan="6">COMPLETED</th>
+					</tr>
+					<tr>
+						<td class="green">Plan</td>
+						<td class="green">Ejecutado</td>
+						<td class="green">%Cumpl</td>
+						<td class="green">GAP</td>
+						<td class="green">Crec. Abs</td>
+						<td class="green">Crec. Relat</td>
+
+						<td class="green-light">Plan</td>
+						<td class="green-light">Ejecutado</td>
+						<td class="green-light">%Cumpl</td>
+						<td class="green-light">GAP</td>
+						<td class="green-light">Crec. Abs</td>
+						<td class="green-light">Crec. Relat</td>
+
+						<td  class="orange">Plan</td>
+						<td  class="orange">Ejecutado</td>
+						<td  class="orange">%Ejecutado</td>
+						<td  class="orange">GAP</td>
+						<td  class="orange">Crec. Abs</td>
+						<td  class="orange">Crec. Relat</td>
+
+						<td class="red">Plan</td>
+						<td class="red">Ejecutado</td>
+						<td class="red">%Ejecutado</td>
+						<td class="red">GAP</td>
+						<td class="red">Crec. Abs</td>
+						<td class="red">Crec. Relat</td>
+
+						<td class="blue">Plan</td>
+						<td class="blue">Ejecutado</td>
+						<td class="blue">%Ejecutado</td>
+						<td class="blue">GAP</td>
+						<td class="blue">Crec. Abs</td>
+						<td class="blue">Crec. Relat</td>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+	</div>
+</div>
+	</div>
+
+<div class="preload">
+    <img src="../assets/gif.svg" alt="">
+</div>
